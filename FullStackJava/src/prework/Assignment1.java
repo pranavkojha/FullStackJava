@@ -126,39 +126,37 @@ public class Assignment1 {
         }
     }
     public static void main(String[] args) {
-        /**
-         * This is the main method that runs an infinite do-while loop till the user choses to
-         * exit.
-         */
-        Assignment1 obj = new Assignment1();
-        int choice;
         Scanner sc = new Scanner(System.in);
-        do {
-            // Accept user input.
-            System.out.println("\n================\nChose from below list:\n" +
-                    "1. Find palindrome of number.\n" +
-                    "2. Print Pattern for a given no.\n" +
-                    "3. Check whether the no is a  prime number.\n" +
-                    "4. Print Fibonacci series.\n" + "--> Enter 0 to Exit.\n");
-            System.out.print("Enter your choice: ");
-            choice = Assignment1.sc.nextInt();
-            switch (choice) {
-                case 0:
-                    System.out.println("Thank you!");
-                    break;
-                case 1: obj.checkPalindrome();
-                break;
-                case 2: obj.printPattern();
-                break;
-                case 3: obj.checkPrimeNumber();
-                break;
-                case 4: obj.printFibonacciSeries();
-                break;
-                default: System.out.println("Invalid choice. Enter a valid no.\n");
-                break;
+        int rows = sc.nextInt();
+        if(rows>0)
+        {
+            for (int i = 1; i <= rows; i++)
+            {
+                int num;
+                if(i%2 == 0)
+                {
+                    num = 0;
+                    for (int j = 1; j <= rows; j++)
+                    {
+                        System.out.print(num);
+                        num = (num == 0)? 1 : 0;
+                    }
+                }
+                else
+                {
+                    num = 1;
+                    for (int j = 1; j <= rows; j++)
+                    {
+                        System.out.print(num);
+                        num = (num == 0)? 1 : 0;
+                    }
+                }
+                System.out.println();
             }
-        } while (choice != 0);
-        System.out.println("Exited Successfully!!!");
-        sc.close();
+        }
+        else
+        {
+            System.out.print("Invalid Input");
+        }
     }
 }
