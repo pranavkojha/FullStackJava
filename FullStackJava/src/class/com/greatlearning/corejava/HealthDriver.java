@@ -6,6 +6,6 @@ public class HealthDriver {
     h.age = 38;
     h.weight = 100.5f;
     h.bmi = 30.1f;
-    System.out.println("Health stats: " + h.age + " " + h.weight + " " + h.bmi);
+    System.out.println("Health stats, age: " + h.age + " Weight: " + h.weight + " BMI: " + h.bmi);
   }
 }
