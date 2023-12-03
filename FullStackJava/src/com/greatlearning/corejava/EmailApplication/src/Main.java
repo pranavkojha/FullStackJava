@@ -6,6 +6,8 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         CredentialManagerServiceImpl c = new CredentialManagerServiceImpl();
         String s = c.generateEmailAddress("Pranav Kumar", "Ojha", 4);
-        System.out.println(s);
+        System.out.println("Email: " + s);
+        s = c.generatePassword();
+        System.out.println("Password: " + s);
     }
 }
