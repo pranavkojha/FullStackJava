@@ -9,6 +9,9 @@ public class ConstructorDemo {
         System.out.println("Squares, int: " + i*i + "float: " + f*f);
         System.out.println("String: "+ s);
         System.out.println("Char: "+ c);
+        final int h=0;
+        //h=10;
+
     }
 
     public static void main(String[] args) {
