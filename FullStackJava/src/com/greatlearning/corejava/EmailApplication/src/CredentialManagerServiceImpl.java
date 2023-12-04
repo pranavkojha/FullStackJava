@@ -11,13 +11,13 @@ public class CredentialManagerServiceImpl implements ICredentialsManagerService{
     String findDeptName(int deptCode) {
         String deptName;
         switch (deptCode) {
-            case 1: deptName = "cs";
+            case 1: deptName = "tech";
             break;
-            case 2: deptName = "ec";
+            case 2: deptName = "admin";
             break;
-            case 3: deptName = "bt";
+            case 3: deptName = "hr";
             break;
-            case 4: deptName = "mech";
+            case 4: deptName = "legal";
             break;
             default:
                 throw new InputMismatchException("Unknown department provided");
@@ -78,13 +78,5 @@ public class CredentialManagerServiceImpl implements ICredentialsManagerService{
         fname = fname.replaceAll("\\s", "");
         lname = lname.replaceAll("\\s", "");
         return fname.toLowerCase() + "." + lname.toLowerCase() + "@" + findDeptName(deptCode) + emailSuffix;
-    }
-
-    /**
-     *
-     */
-    @Override
-    public void showCredentials() {
-
     }
 }
